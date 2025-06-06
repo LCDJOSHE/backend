@@ -8,9 +8,10 @@ export class Notification {
   @Column()
   message: string;
 
-  @Column()
+  @Column({ default: 'sms' })
   type: string;
 
   @CreateDateColumn()
   createdAt: Date;
 }
+
